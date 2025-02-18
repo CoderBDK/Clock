@@ -28,6 +28,29 @@ with clear indicators for each clock hand, ensuring a seamless and intuitive exp
 - **Kotlin 1.8** or later
 - **Jetpack Compose** for building modern, UI-centric Android applications
 
+## Usage
+```kotlin
+@Preview(showBackground = true)
+@Composable
+fun ClockPreview() {
+    ClockTheme {
+        Box(
+            Modifier.fillMaxWidth().background(
+                color = Color(0xFF080B1F)
+            ),
+            contentAlignment = Alignment.Center
+        ) {
+            Clock(
+                state = rememberClockState(),
+                modifier = Modifier
+                    .padding(24.dp)
+                    .fillMaxWidth()
+                    .height(320.dp)
+            )
+        }
+    }
+}
+```
 ## Installation
 
 Clone this repository:
